@@ -10,11 +10,11 @@ directory_paths = os.listdir("functions")
 def make_view(var):
     exec(f"from functions.{var} import main")
     function = eval("main")
-
+    response = function.execute()
     if not function.execute():
-        return ("", 400)
+        return ("BAD REQUEST", 400)
 
-    return ("", 200)
+    return (response, 200)
 
 
 if __name__ == "__main__":
