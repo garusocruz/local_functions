@@ -2,7 +2,11 @@ import os
 from flask import Flask, json, request, Response
 
 app = Flask(__name__)
-app.config.update(TESTING=True, SECRET_KEY=b'_5#y2L"F4Q8z\n\xec]/')
+app.config.update(
+    GOOGLE_SERVICE_ACCOUNT=os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", None),
+    PROJECT_ID="app-agrogo",
+    TESTING=True,
+)
 directory_paths = os.listdir("functions")
 
 
