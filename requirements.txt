@@ -1,8 +1,1 @@
-ipdb
 flask
-python-dotenv==0.17.0
-requests==2.25.1
-google-auth==1.28.1
-google-api-core==1.26.3
-google-cloud-firestore
-google-cloud-pubsub==2.4.1
